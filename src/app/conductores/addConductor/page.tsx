@@ -28,23 +28,25 @@ const FormLayout = () => {
                 <div className="mb-4.5 flex flex-col gap-6 xl:flex-row">
                   <div className="w-full xl:w-1/2">
                     <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                      Nombres
+                      Nombres <span className="text-meta-1">*</span>
                     </label>
                     <input
                       type="text"
-                      placeholder="Enter your first name"
+                      placeholder="Nombres del conductor"
                       className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                      required
                     />
                   </div>
 
                   <div className="w-full xl:w-1/2">
                     <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                      Apellido
+                      Apellidos <span className="text-meta-1">*</span>
                     </label>
                         <input
                         type="text"
-                        placeholder="Apellido"
+                        placeholder="Apellidos del conductor"
                         className="w-full pl-5 rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                        required
                         />
                   </div>
                 </div>
@@ -55,12 +57,13 @@ const FormLayout = () => {
 
                     <div className="w-full xl:w-1/2">
                     <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                        Número documento
+                        Número documento <span className="text-meta-1">*</span>
                     </label>
                     <input
                         type="number"
-                        placeholder="Select subject"
+                        placeholder="Número de documento"
                         className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                        required
                     />
                     </div>
 
@@ -76,7 +79,7 @@ const FormLayout = () => {
                     />
                 </div>
 
-                <button className="flex w-full justify-center rounded bg-primary hover:bg-green-500 transition-colors duration-300 p-3 font-medium text-gray hover:bg-opacity-90">
+                <button className="flex w-full justify-center rounded bg-[#FFBC0D] hover:bg-[#ffdd87] hover:text-black transition-colors duration-300 p-3 font-medium text-black hover:bg-opacity-90">
                   Agregar conductor
                 </button>
               </div>

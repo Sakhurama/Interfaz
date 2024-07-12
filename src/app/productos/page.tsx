@@ -24,7 +24,7 @@ const TablesPage = () => {
 
         <Link
           href="/productos/addProduct"
-          className="inline-flex items-center justify-center gap-2.5 rounded-full bg-green-500 mb-3 px-7 py-4 text-center font-medium text-white hover:bg-green-700 transition-colors duration-300 lg:px-8 xl:px-10"
+          className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#FFBC0D] mb-3 px-7 py-4 text-center font-medium text-white hover:bg-[#ffdd87] hover:text-black transition-colors duration-300 lg:px-8 xl:px-10"
         >
           <span>
           <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" /><path d="M15 12h-6" /><path d="M12 9v6" /></svg>

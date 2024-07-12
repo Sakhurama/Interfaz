@@ -30,13 +30,13 @@ const TipoDocumento: React.FC = () => {
           <option value="" disabled className="text-body dark:text-bodydark">
             Elige el documento
           </option>
-          <option value="USA" className="text-body dark:text-bodydark">
+          <option value="Cedula" className="text-body dark:text-bodydark">
             Cédula
           </option>
-          <option value="UK" className="text-body dark:text-bodydark">
+          <option value="Pasaporte" className="text-body dark:text-bodydark">
             Pasaporte
           </option>
-          <option value="Canada" className="text-body dark:text-bodydark">
+          <option value="Cedula extranjeria" className="text-body dark:text-bodydark">
             Cédula de extranjería
           </option>
         </select>

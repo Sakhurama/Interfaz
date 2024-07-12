@@ -1,38 +1,31 @@
 import Image from "next/image";
 import { Product } from "@/types/product";
+import { PRODUCTOS } from "@/types/datosProductos";
 
-const productData: Product[] = [
+const productData: PRODUCTOS[] = [
   {
-    image: "/images/product/product-01.png",
+    image: "/images/product/hamburguesa.png",
     name: "Hamburguesa",
-    category: "???",
     price: 10000,
-    sold: 22,
-    profit: 45,
+    description: "Deliciosa hamburguesa con carne jugosa, lechuga fresca y tomate.",
   },
   {
-    image: "/images/product/product-02.png",
+    image: "/images/product/perrito.png",
     name: "Perro caliente",
-    category: "???",
-    price: 1000,
-    sold: 12,
-    profit: 125,
+    price: 18200,
+    description: "Clásico perro caliente con salchicha, cebolla, mostaza y ketchup.",
   },
   {
-    image: "/images/product/product-03.png",
+    image: "/images/product/papas.png",
     name: "Papas locas",
-    category: "???",
     price: 1000000,
-    sold: 64,
-    profit: 247,
+    description: "Crocantes papas fritas con salsa especial, queso y trocitos de tocineta.",
   },
   {
-    image: "/images/product/product-04.png",
+    image: "/images/product/hamburguesadoble.png",
     name: "Hamburguesa doble carne",
-    category: "???",
-    price: 5000,
-    sold: 72,
-    profit: 103,
+    price: 32000,
+    description: "Hamburguesa con doble carne, queso derretido, lechuga y tomate.",
   },
 ];
 
@@ -41,7 +34,7 @@ const ListaProductos = () => {
     <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
       <div className="px-4 py-6 md:px-6 xl:px-7.5">
         <h4 className="text-xl font-semibold text-black dark:text-white">
-          Top Products
+          Todos tus productos
         </h4>
       </div>
 
@@ -53,14 +46,14 @@ const ListaProductos = () => {
           <p className="font-medium">Precio</p>
         </div>
         <div className="col-span-1 flex items-center">
+          <p className="font-medium">Descripción</p>
+        </div>
+        {/* <div className="col-span-1 flex items-center">
           <p className="font-medium">???</p>
         </div>
         <div className="col-span-1 flex items-center">
           <p className="font-medium">???</p>
-        </div>
-        <div className="col-span-1 flex items-center">
-          <p className="font-medium">???</p>
-        </div>
+        </div> */}
       </div>
 
       {productData.map((product, key) => (
@@ -83,22 +76,22 @@ const ListaProductos = () => {
               </p>
             </div>
           </div>
-          <div className="col-span-2 hidden items-center sm:flex">
+          <div className="col-span-1 hidden items-center sm:flex">
             <p className="text-sm text-black dark:text-white">
               ${product.price.toLocaleString('es-ES')}
             </p>
           </div>
-          <div className="col-span-1 flex items-center">
+          <div className="col-span-3 flex items-center">
             <p className="text-sm text-black dark:text-white">
-              {product.category}
+              {product.description}
             </p>
           </div>
-          <div className="col-span-1 flex items-center">
+          {/* <div className="col-span-1 flex items-center">
             <p className="text-sm text-black dark:text-white">{product.sold}</p>
           </div>
           <div className="col-span-1 flex items-center">
             <p className="text-sm text-meta-3">${product.profit}</p>
-          </div>
+          </div> */}
         </div>
       ))}
     </div>

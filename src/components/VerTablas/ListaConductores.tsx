@@ -4,37 +4,37 @@ import Image from "next/image";
 
 const brandData: CONDUCTORES[] = [
   {
-    foto: "/images/product/product-01.png",
+    foto: "/images/user/user-01.png",
     nombre: "Daniel Alberto",
     apellido: "Romero Ruiz",
     tipo: "Cédula de extranjería",
     documento: 1005151662,
   },
   {
-    foto: "/images/product/product-01.png",
+    foto: "/images/user/user-03.png",
     nombre: "Camilo",
     apellido: "García",
     tipo: "Cédula",
     documento: 1005151662,
   },
   {
-    foto: "/images/product/product-01.png",
-    nombre: "Marcos",
+    foto: "/images/user/user-05.png",
+    nombre: "Marcos Andrés",
     apellido: "Suarez",
     tipo: "Pasaporte",
     documento: 1005151662,
   },
   {
-    foto: "/images/product/product-01.png",
+    foto: "/images/user/user-06.png",
     nombre: "Gabriel",
     apellido: "Díaz",
     tipo: "Cédula",
     documento: 1005151662,
   },
   {
-    foto: "/images/product/product-01.png",
-    nombre: "Mateo",
-    apellido: "Rodríguez",
+    foto: "/images/user/user-08.png",
+    nombre: "Mateo Luis",
+    apellido: "Rodríguez Mendieta",
     tipo: "Cédula",
     documento: 1005151662,
   },
@@ -48,7 +48,7 @@ const ListaConductores = () => {
       </h4>
 
       <div className="flex flex-col">
-        <div className="grid grid-cols-3 rounded-sm bg-gray-2 dark:bg-meta-4 sm:grid-cols-5">
+        <div className="grid grid-cols-3 rounded-sm bg-gray-2 dark:bg-meta-4 sm:grid-cols-4">
           <div className="p-2.5 xl:p-5">
             <h5 className="text-sm font-medium  ml-8 uppercase xsm:text-base">
               Nombres
@@ -78,7 +78,7 @@ const ListaConductores = () => {
 
         {brandData.map((brand, key) => (
           <div
-            className={`grid grid-cols-3 sm:grid-cols-5 ${
+            className={`grid grid-cols-3 sm:grid-cols-4 ${
               key === brandData.length - 1
                 ? ""
                 : "border-b border-stroke dark:border-strokedark"

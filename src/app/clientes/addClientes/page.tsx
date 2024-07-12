@@ -29,12 +29,13 @@ const FormLayout = () => {
 
                   <div className="w-full xl:w-full">
                     <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                      Nombre
+                      Nombre <span className="text-meta-1">*</span>
                     </label>
                     <input
                       type="text"
                       placeholder="Nombre del cliente"
                       className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                      required
                       />
                   </div>
                 </div>
@@ -42,12 +43,14 @@ const FormLayout = () => {
                 <div className="mb-4.5 flex flex-col gap-6 xl:flex-row">
                     <div className="w-full xl:w-1/2">
                         <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                            Celular
+                            Celular <span className="text-meta-1">*</span>
                         </label>
                         <input
                             type="tel"
                             placeholder="Número de celular"
                             className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                            required
+                            minLength={10} // Los numeros de celular y telefono tienen 10 caracteres
                         />
                     </div>
 
@@ -71,10 +74,11 @@ const FormLayout = () => {
                     type="text"
                     placeholder="Dirección del cliente"
                     className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                    required
                   />
                 </div>
 
-                <button className="flex w-full justify-center rounded bg-primary hover:bg-green-500 transition-colors duration-300 p-3 font-medium text-gray hover:bg-opacity-90">
+                <button className="flex w-full justify-center rounded bg-[#FFBC0D] hover:bg-[#ffdd87] hover:text-black transition-colors duration-300 p-3 font-medium text-black hover:bg-opacity-90">
                   Agregar cliente
                 </button>
               </div>

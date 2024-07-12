@@ -27,18 +27,19 @@ const FormLayout = () => {
                 <div className="mb-4.5 flex flex-col gap-6 xl:flex-row">
                   <div className="w-full xl:w-1/2">
                     <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                      Nombre del producto
+                      Nombre del producto <span className="text-meta-1">*</span>
                     </label>
                     <input
                       type="text"
-                      placeholder="Enter your first name"
+                      placeholder="Nombre del producto"
                       className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                      required
                     />
                   </div>
 
                   <div className="w-full xl:w-1/2">
                     <label className="mb-3 block text-sm font-medium text-black dark:text-white">
-                      Precio
+                      Precio <span className="text-meta-1">*</span>
                     </label>
                     <div className="relative">
                         <span className="absolute left-4 top-1/2 transform -translate-y-1/2 text-black dark:text-white">$</span>
@@ -46,6 +47,7 @@ const FormLayout = () => {
                         type="number"
                         placeholder="Valor del producto"
                         className="w-full pl-10 rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                        required
                         />
                     </div>
                   </div>
@@ -65,6 +67,18 @@ const FormLayout = () => {
 
                     <CategoriasProductos />
                 </div> */}
+
+                <div className="mb-6">
+                    <label className="mb-3 block text-sm font-medium text-black dark:text-white">
+                      Descripción
+                    </label>
+                    <textarea
+                      rows={4}
+                      placeholder="Escribe como es tu producto..."
+                      className="w-full rounded border-[1.5px] border-stroke bg-transparent px-5 py-3 text-black outline-none transition focus:border-primary active:border-primary disabled:cursor-default disabled:bg-whiter dark:border-form-strokedark dark:bg-form-input dark:text-white dark:focus:border-primary"
+                    ></textarea>
+                </div>
+
                 <div className="mb-6">
                     <label className="mb-3 block text-sm font-medium text-black dark:text-white">
                     Foto del producto
@@ -76,7 +90,7 @@ const FormLayout = () => {
                     />
                 </div>
 
-                <button className="flex w-full justify-center rounded bg-primary hover:bg-green-500 transition-colors duration-300 p-3 font-medium text-gray hover:bg-opacity-90">
+                <button className="flex w-full justify-center rounded bg-[#FFBC0D] hover:bg-[#ffdd87] hover:text-black transition-colors duration-300 p-3 font-medium text-black hover:bg-opacity-90">
                   Agregar producto
                 </button>
               </div>
